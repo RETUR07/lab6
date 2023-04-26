@@ -1,0 +1,5 @@
+<div>
+  <div *ngFor="let d of drinksService.getDrinks()">
+    <p (click)="onDrinkClick(d.id)">{{d.name}}</p>
+  </div>
+</div>

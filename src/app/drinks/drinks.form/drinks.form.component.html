@@ -1,0 +1,30 @@
+<button (click)="centerNavigate()">to center</button>
+<form #form>
+  <div class="row">
+    <input [class.error]="model.control.invalid && model.control.touched"
+            #model="ngModel"
+            type="number"
+            required
+            [(ngModel)]="data.id"
+            name="id" />
+  </div>
+  <div class="row">
+    <input [class.error]="model.control.invalid && model.control.touched"
+            #model="ngModel"
+            type="text"
+            required
+            [(ngModel)]="data.name"
+            name="name" />
+  </div>
+  <div class="row">
+    <input [class.error]="model.control.invalid && model.control.touched"
+            #model="ngModel"
+            type="number"
+            required
+            [(ngModel)]="data.price"
+            name="price" />
+  </div>
+  <div>
+    <button type="submit" (click)="add()">Add</button>
+  </div>
+</form>

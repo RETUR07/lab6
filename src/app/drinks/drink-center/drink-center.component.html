@@ -1,0 +1,4 @@
+<button (click)="formNavigate()">to form</button>
+<app-drink-list (detailsEvent)="onDetailsEvent($event)" ></app-drink-list>
+<app-drink-details *ngIf="details" [details]="details" ></app-drink-details>
+
