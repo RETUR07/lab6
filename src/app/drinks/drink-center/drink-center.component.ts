@@ -20,7 +20,9 @@ export class DrinkCenterComponent {
   }
 
   onDetailsEvent(detailsID: number) {
-    this.details = this.drinksService.getDrinkById(detailsID);
+    this.drinksService.getDrinkById(detailsID).subscribe(_ => {
+      this.details = _;
+    });
   }
 
   formNavigate() {
